@@ -15,15 +15,15 @@ namespace ContosoUniversity
     public class Program
     {
         public static void Main(string[] args)
-        {
-             var host = CreateWebHostBuilder(args).Build();
+{
+     var host = CreateWebHostBuilder(args).Build();
 
-         using (var scope = host.Services.CreateScope())
+    using (var scope = host.Services.CreateScope())
     {
         var services = scope.ServiceProvider;
         try
         {
-			var context = services.GetRequiredService<SchoolContext>();
+            var context = services.GetRequiredService<SchoolContext>();
             DbInitializer.Initialize(context);
         }
         catch (Exception ex)
@@ -34,7 +34,7 @@ namespace ContosoUniversity
     }
 
     host.Run();
-        }
+}
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
