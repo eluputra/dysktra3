@@ -10,6 +10,7 @@
     <a asp-action="Create">Create New</a>
 </p>
 
+<!-- creating the search button-->
 <form asp-action="Index" method="get">
     <div class="form-actions no-color">
         <p>
@@ -62,7 +63,7 @@
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
     var nextDisabled = !Model.HasNextPage ? "disabled" : "";
 }
-
+<!-- paging button display by tag helpers-->
 <a asp-action="Index"
    asp-route-sortOrder="@ViewData["CurrentSort"]"
    asp-route-pageNumber="@(Model.PageIndex - 1)"

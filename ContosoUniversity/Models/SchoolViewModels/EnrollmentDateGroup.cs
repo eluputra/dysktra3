@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
+// adding new class base on what it requested but not sure yet what it does maybe it just creating view model?
 
 namespace ContosoUniversity.Models.SchoolViewModels
 {

@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ContosoUniversity.Data;
 using ContosoUniversity.Models;
 
+// chages that adding index method
 namespace ContosoUniversity.Controllers
 {
     public class StudentsController : Controller
@@ -21,9 +22,9 @@ namespace ContosoUniversity.Controllers
 
         // string sortorder etc are method signature
         public async Task<IActionResult> Index(
-     string sortOrder,
-     string currentFilter,
-     string searchString,
+     string sortOrder, // sort order position
+     string currentFilter,// filter the name
+     string searchString,// search name
      int? pageNumber) 
         {
             ViewData["CurrentSort"] = sortOrder;
@@ -43,6 +44,8 @@ namespace ContosoUniversity.Controllers
 
             var students = from s in _context.Students
                            select s;
+
+            //changes the indexview 
             if (!String.IsNullOrEmpty(searchString))
             {
                 students = students.Where(s => s.LastName.Contains(searchString)

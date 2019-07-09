@@ -13,6 +13,10 @@ namespace ContosoUniversity.Controllers
 {
     public class HomeController : Controller
     {
+        
+        //Add class variables to the database context as soon as the opening curly braces for the class, and get ASP.NET context instances
+
+
         private readonly SchoolContext _context;
 
         public HomeController(SchoolContext context)

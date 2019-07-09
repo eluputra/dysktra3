@@ -13,6 +13,8 @@ using ContosoUniversity.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 
+// notes in dysktra3 I am not really clear when adding the view I need to reread all of it and the sorting fuction kinda makes me confuse
+
 namespace ContosoUniversity
 {
     public class Startup
